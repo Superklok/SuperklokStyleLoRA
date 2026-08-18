@@ -1,0 +1,71 @@
+SUPERKLOK LABS UNIFIED PUBLIC ASSET LICENSE v1.0
+Copyright (c) 2026 Trevor Morin / Superklok Labs
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of 
+this distribution, including but not limited to: ComfyUI node workflows, JSON 
+configuration files, artificial intelligence LoRA checkpoints (.safetensors files),
+sample/testing source images, and associated digital utilities (collectively 
+referred to as the "Assets"), to use, copy, modify, merge, publish, distribute, 
+sublicense, and/or sell derivatives of the Assets for any commercial or 
+non-commercial purpose, subject to the following conditions:
+
+1. MANDATORY ATTRIBUTION REQUIREMENT
+You must give appropriate credit to Trevor Morin / Superklok Labs on EVERY 
+commercial and non-commercial release that you create with, train on, or derive 
+from these Assets. This includes any images generated using the provided 
+workflows or LoRAs, or any upscaled outputs generated using the provided sample 
+testing images.
+
+To satisfy this requirement, you must perform at least one of the following actions
+on the platform where the output is published:
+A) Explicitly include a clickable hyperlink to one of the Official Accounts listed 
+below.
+B) Tag the official @SuperklokLabs account on that platform.
+C) If the publishing platform does not technically permit the use of external 
+hyperlinks or user tags, you must prominently state: "Created using assets by 
+Superklok Labs" within the content's text description, metadata, or credits.
+
+2. ASSET SPECIFIC SCOPE
+- Workflows & Upscalers: Applies to the structural arrangement of nodes, settings, 
+and embedded logic.
+- LoRAs & Models: Applies to the trained mathematical weights or checkpoints 
+distributed within this package.
+- General Utilities: Applies to scripts, templates, and configurations provided 
+to assist in data generation or processing.
+
+3. INDEPENDENT USE & NO ENDORSEMENT
+Any use of the Assets by a third party represents the sole creation and expression 
+of that independent user. The original creator does not monitor, approve, or 
+endorse any user-generated content made with these Assets.
+
+4. RESERVATION OF RIGHTS FOR CUSTOM DERIVATIVES
+The original creator (Trevor Morin / Superklok Labs) retains the right to issue 
+separate, exclusive, or proprietary commercial licenses for custom, modified, or 
+derivative variations of these Assets to individual third parties via private contract.
+
+5. DISCLAIMER OF WARRANTY
+THE ASSETS ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, 
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A 
+PARTICULAR PURPOSE AND NONINFRINGEMENT. 
+
+6. LIMITATION OF LIABILITY
+IN NO EVENT SHALL THE ORIGINAL CREATOR BE LIABLE FOR ANY CLAIM, DAMAGES, ACTION, OR
+OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING 
+FROM, OUT OF OR IN CONNECTION WITH THE ASSETS, THE USE OF THE ASSETS, OR THE 
+ILLEGAL, OFFENSIVE, OR DEFAMATORY CONDUCT OF ANY THIRD PARTY USING THE ASSETS.
+
+7. INDEMNIFICATION
+By using these Assets, you agree to indemnify, defend, and hold harmless the 
+original creator from and against any claims, liabilities, losses, damages, or 
+costs (including legal fees) arising out of your misuse of the Assets or creation 
+of content that violates local, national, or international laws.
+
+OFFICIAL ACCOUNTS FOR ATTRIBUTION:
+
+Superklok Labs:
+- GitHub: https://github.com/Superklok
+- X (Twitter): https://x.com/SuperklokLabs
+- Instagram: https://www.instagram.com/superkloklabs
+- TikTok: https://www.tiktok.com/@superklok
+- YouTube: https://www.youtube.com/@superklok
+- LinkedIn: https://www.linkedin.com/in/superklok
