@@ -1,4 +1,4 @@
-# 📺 SuperklokStyleLoRA: 100% Commercially Usable Style LoRA v1.0.0
+# 📺 SuperklokStyleLoRA: 100% Commercially Usable Style LoRA v1.0.1
 
 <img src="Screenshots/README Header.png" />
 
