@@ -1,4 +1,4 @@
-# 📺 SuperklokStyleLoRA: 100% Commercially Usable Style LoRA v1.0.1
+# 📺 SuperklokStyleLoRA: 100% Commercially Usable Style LoRA v1.0.7
 
 <img src="Screenshots/README Header.png" />
 
@@ -28,6 +28,7 @@ Visit [Upwork](https://www.upwork.com/freelancers/~01a2b86360ffeb733e)/[Contra](
 * **Base Architecture Compatibility:** Stable Diffusion 3.5 Large (fp8 scaled / fp16 / bf16)
 * **Native Trained Resolution:** 1344x768 (Landscape centered-crop dataset layout)
 * **Required Activation Token:** `Superklok Style`
+* **Recommended Weight:** `0.5 - 0.8` (Style models naturally thrive at slightly lower weights to preserve creative composition flexibility. Feel free to experiment with different values outside of the universal recommendation of `0.5 - 0.8` for style LoRAs, to see how it affects the final output image.)
 * **Dataset Density:** 120 hand-selected art style images at 20 processing iterations per file (2,700 total training steps).
 * **Final loss value**: 0.1404, a stellar, textbook-perfect score for an intricate Style LoRA. Style models naturally hold a slightly higher final loss value than characters (for example, 0.10 to 0.15 vs [SunnyChuxemLoRA](https://github.com/Superklok/SunnyChuxemLoRA) character LoRA's 0.02). This is exactly what we want because it prevents the model from being rigid. It captured the layout texture, the scanlines, and the branding layout without losing its creative flexibility.
 
