@@ -1,4 +1,4 @@
-# 📺 SuperklokStyleLoRA: 100% Commercially Usable Style LoRA v1.0.7
+# 📺 SuperklokStyleLoRA: 100% Commercially Usable Style LoRA v1.0.17
 
 <img src="Screenshots/README Header.png" />
 
@@ -15,12 +15,12 @@ Unlike LoRAs and workflows tied to restrictive non-commercial licenses, **this e
 * **Content Creators:** Automate flashy and unique marketing image generation.
 * **IP Creators:** Monetize your original marketing images, workflows, and visual outputs with zero subscription overhead.
 
-`SuperklokStyleLoRA` was created with the help of `ComfyUImarketing`, which specializes in turning primitive MS Paint drawings, combined with text prompts, into highly detailed 100% commercially usable images. The original uploaded reference image `Superklok Labs Banner.png` for the `SuperklokStyleLoRA` began as a primitive MS Paint drawing, here are the steps of its development using the `ComfyUImarketing` workflow.
+`SuperklokStyleLoRA` was created with the help of `MarketingToolkitSL`, which specializes in turning primitive MS Paint drawings, combined with text prompts, into highly detailed 100% commercially usable images. The original uploaded reference image `Superklok Labs Banner.png` for the `SuperklokStyleLoRA` began as a primitive MS Paint drawing, here are the steps of its development using `MarketingToolkitSL` workflows.
 
 <img src="Screenshots/CircuitBoard.png" width="40%"/> ➡️ <img src="Screenshots/CircuitBoard - Superklok Labs Writing.png" width="40%"/>⤵️
 <img src="Screenshots/Superklok Labs Banner.png" width="40%"/> ➡️ <img src="Screenshots/Sample Input Image.png" width="40%"/>
 
-Visit [Upwork](https://www.upwork.com/freelancers/~01a2b86360ffeb733e)/[Contra](https://contra.com/Superklok) to get your copy of the `ComfyUImarketing` 100% commercially usable marketing automation engine today!
+Visit [Upwork](https://www.upwork.com/freelancers/~01a2b86360ffeb733e)/[Contra](https://contra.com/Superklok) to get your copy of the `MarketingToolkitSL` 100% commercially usable marketing automation engine today!
 
 ---
 
@@ -30,7 +30,7 @@ Visit [Upwork](https://www.upwork.com/freelancers/~01a2b86360ffeb733e)/[Contra](
 * **Required Activation Token:** `Superklok Style`
 * **Recommended Weight:** `0.5 - 0.8` (Style models naturally thrive at slightly lower weights to preserve creative composition flexibility. Feel free to experiment with different values outside of the universal recommendation of `0.5 - 0.8` for style LoRAs, to see how it affects the final output image.)
 * **Dataset Density:** 120 hand-selected art style images at 20 processing iterations per file (2,700 total training steps).
-* **Final loss value**: 0.1404, a stellar, textbook-perfect score for an intricate Style LoRA. Style models naturally hold a slightly higher final loss value than characters (for example, 0.10 to 0.15 vs [SunnyChuxemLoRA](https://github.com/Superklok/SunnyChuxemLoRA) character LoRA's 0.02). This is exactly what we want because it prevents the model from being rigid. It captured the layout texture, the scanlines, and the branding layout without losing its creative flexibility.
+* **Final loss value**: `0.1404`, a stellar, textbook-perfect score for an intricate Style LoRA. Style models naturally hold a slightly higher final loss value than characters (for example, 0.10 to 0.15 vs [SunnyChuxemLoRA](https://github.com/Superklok/SunnyChuxemLoRA) character LoRA's 0.02). This is exactly what we want because it prevents the model from being rigid. It captured the layout texture, the scanlines, and the branding layout without losing its creative flexibility.
 
 ---
 
@@ -143,9 +143,9 @@ When training your own LoRAs, you can use the `captioner.py` script found in you
 
 <img src="Screenshots/captioner script.png" width="60%"/>
 
-If you're interested in owning a custom version of the same Premium ComfyUI Workflow that generated the images used to train `SuperklokStyleLoRA`, then reach out through [Upwork](https://www.upwork.com/freelancers/~01a2b86360ffeb733e) or [Contra](https://contra.com/Superklok) to order your very own custom copy of the `ComfyUImarketing` 100% Commercially Usable Marketing Automation Engine today! Here's an output sample from using the `SuperklokStyleLoRA` through the `ComfyUImarketing` workflow:
+If you're interested in owning a custom version of the same Premium ComfyUI Workflow that generated the images used to train `SuperklokStyleLoRA`, then reach out through [Upwork](https://www.upwork.com/freelancers/~01a2b86360ffeb733e) or [Contra](https://contra.com/Superklok) to order your very own custom copy of the `MarketingToolkitSL` 100% Commercially Usable Marketing Automation Engine today! Here's an output sample from using the `SuperklokStyleLoRA` through the `MarketingToolkitSL` workflows:
 
-<img src="Screenshots/ComfyUImarketing.png" width="75%"/> 
+<img src="Screenshots/MarketingToolkitSL.png" width="75%"/> 
 
 <img src="Screenshots/SuperklokStyle_00001_.png" />
 
