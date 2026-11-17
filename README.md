@@ -1,4 +1,4 @@
-# 📺 SuperklokStyleLoRA: 100% Commercially Usable Style LoRA v1.0.17
+# 📺 SuperklokStyleLoRA: 100% Commercially Usable Style LoRA v1.12.0
 
 <img src="Screenshots/README Header.png" />
 
@@ -10,6 +10,8 @@ This LoRA reproduces ultra-saturated, neon-green circuit board backgrounds, copp
 
 ## 💵 The Ultimate Commercial Core
 Unlike LoRAs and workflows tied to restrictive non-commercial licenses, **this entire architecture is 100% free for commercial use.** 
+
+(NOTE: Stable Diffusion 3.5 Large is 100% Commercially Usable up to an annual revenue of under USD $1 million.)
 
 * **Indie Game Devs:** Generate menus, title screens, and concept art locally.
 * **Content Creators:** Automate flashy and unique marketing image generation.
@@ -25,6 +27,9 @@ Visit [Upwork](https://www.upwork.com/freelancers/~01a2b86360ffeb733e)/[Contra](
 ---
 
 ## 📊 Model Technical Details
+
+<img src="Screenshots/SuperklokStyleLoRA.png" width="75%"/>
+
 * **Base Architecture Compatibility:** Stable Diffusion 3.5 Large (fp8 scaled / fp16 / bf16)
 * **Native Trained Resolution:** 1344x768 (Landscape centered-crop dataset layout)
 * **Required Activation Token:** `Superklok Style`
@@ -35,21 +40,22 @@ Visit [Upwork](https://www.upwork.com/freelancers/~01a2b86360ffeb733e)/[Contra](
 ---
 
 ## 🚀 Native ComfyUI Training Architecture
-This repository includes the official `ComfyUI Workflow - SuperklokStyleLoRA.json` workflow file. Users can train this model locally entirely within ComfyUI without installing terminal command suites, command-line environments, or complex external dependencies.
+This repository includes the official `ComfyUI Workflow - SuperklokStyleLoRA - SD3.5Large.json` workflow file. Users can train this model locally entirely within ComfyUI without installing terminal command suites, command-line environments, or complex external dependencies.
+
+### ⚙️ System Requirements
+* **Recommended Operating System:** Windows 11
+* **Minimum Processor:** Intel Core i5-10400
+* **Memory:** 32GB RAM
+* **Recommended Graphics Card:** Nvidia RTX 50 Series GPU - Minimum 16GB VRAM
+* **Required Storage Space:** 25GB
 
 ---
 
 ## INSTALLATION GUIDE
 
-## 🎨 Step-by-Step Setup: ComfyUI Automation Workflow
+## 🎨 Step-by-Step Setup: Automated Installation Guide
 
-Follow these steps to configure the image-generation pipeline. This workflow is optimized to run on a single 16GB VRAM graphics card.
-
-### Prerequisites
-* An NVIDIA GPU with 16GB+ VRAM (Optimized for RTX 4070 Ti, 5070 Ti, or similar).
-* The `SuperklokStyleLoRA\dataset\20_SuperklokStyle\` folder.
-* The `ComfyUI Workflow - SuperklokStyleLoRA.json` workflow file included in the `SuperklokStyleLoRA\` folder.
-* The `captioner.py` script in the `SuperklokStyleLoRA\` folder.
+**SuperklokStyleLoRA** features a completely portable, 100% offline-capable architecture. All application frameworks, neural weights, and local dependencies live entirely inside your main target project folder. Follow these steps to configure the image-generation pipeline. This workflow is optimized to run on a single 16GB VRAM graphics card.
 
 ---
 
@@ -61,81 +67,47 @@ Follow these steps to configure the image-generation pipeline. This workflow is 
 
 1. You will first need to install Git for Windows from the official page (https://gitforwindows.org/). The direct download link is https://github.com/git-for-windows/git/releases/download/v2.55.0.windows.3/Git-2.55.0.3-64-bit.exe
 
-<img src="Screenshots/ComfyUI installer.png" width="70%"/>
+<img src="Screenshots/python.png" width="70%"/>
 
-2. Download the official **ComfyUI Windows Portable Build** from the ComfyUI Downloads Page (https://docs.comfy.org/installation/comfyui_portable_windows).
+2. Download and install the newest version of Python for Windows from the official page (https://www.python.org/downloads/windows/). The direct download link for the 64-bit Windows installer is https://www.python.org/ftp/python/3.14.10/python-3.14.10-amd64.exe
 
-<img src="Screenshots/ComfyUI folder.png" width="70%"/>
+> ⚠️ **NOTE:**Make sure to check "Add Python to PATH" when installing the newest version of Python.
 
-3. Extract the downloaded `ComfyUI_windows_portable_nvidia.7z` archive into your `SuperklokStyleLoRA\` folder, then go inside the resulting `ComfyUI_windows_portable_nvidia` folder and not the `.7z` archive.
+3. Download or clone this repository (`SuperklokStyleLoRA/`) directly to the location on your hard drive where you intend to run the application.
 
-4. Open the `SuperklokStyleLoRA\ComfyUI_windows_portable` folder. You will see several batch files, an `advanced` folder, a main `ComfyUI` folder, a `python_embeded` folder, and an `Update` folder.
+<img src="Screenshots/open terminal.png" width="40%"/> ➡️ <img src="Screenshots/blank terminal.png" width="40%"/>
 
-> ⚠️ **NOTE:**Make sure the `ComfyUI_windows_portable_nvidia` folder contains all the ComfyUI files and is placed directly in the `SuperklokStyleLoRA\` folder.
+4. Open a standard terminal window directly inside the main `SuperklokStyleLoRA/` directory path (Type `cmd` in your Windows file explorer address bar and press **Enter**).
 
----
+<img src="Screenshots/SuperklokStyleLoRA installer script.png" width="40%"/> ➡️ <img src="Screenshots/python terminal.png" width="40%"/>
 
-### Step 2: Configure the VRAM-Optimized Startup Script
+5. Run the automated visual installer script using the native Python command:
 
-To prevent ComfyUI from locking your graphics card and crashing your local chatbot backend, modify the startup configurations:
+```bash
+python SuperklokStyleLoRA-comfyui-installer.py
+```
 
-<img src="Screenshots/ComfyUI files.png" width="70%"/>
+<img src="Screenshots/SuperklokStyleLoRA installer complete.png" width="70%"/>
 
-1. Right-click the file named `run_nvidia_gpu.bat` and select **Edit** (or open it with Notepad).
-
-<img src="Screenshots/ComfyUI custom start script.png" width="80%"/>
-
-2. Replace the entire default text line at the top of the file with the following optimized command:
-   ```python
-   .\python_embeded\python.exe -s ComfyUI\main.py --windows-standalone-build --fp8_e4m3fn-text-enc --use-pytorch-cross-attention
-   ```
-3. Save the `run_nvidia_gpu.bat` file and close your text editor. 
+The background engine will autonomously download the portable ComfyUI base, resolve the proprietary BCJ2 block filters using a temporary extractor asset, clone the `ComfyUI-Manager` core layers, fetch the 13.9GB Stable Diffusion 3.5 Large checkpoint, and automatically wire your local training image dataset folder (`dataset/20_SuperklokStyle/`) directly into the pipeline ingestion loops.
 
 ---
 
-### Step 3: Download the ComfyUI Manager
-
-<img src="Screenshots/ComfyUI cmd.png" width="85%"/>
-
-1. Browse to your `SuperklokStyleLoRA\ComfyUI_windows_portable\ComfyUI\custom_nodes` folder and open a Command Prompt inside that folder by clicking in the **Address Bar** at the top, typing `cmd`, and pressing Enter. This will open a Command Prompt terminal in your `custom_nodes` folder.
-
-<img src="Screenshots/ComfyUI manager install.png" width="80%"/>
-
-2. Once the black box (Command Prompt) pops up, type the following into it and press Enter: 
-   ```shell
-   git clone https://github.com/ltdrdata/ComfyUI-Manager comfyui-manager
-   ```
-3. Close the Command Prompt terminal window once the download operation is complete.
-
----
-
-### Step 4: Load the Automated Workflow & Dependencies 
-
-<img src="Screenshots/stable diffusion.png" width="40%"/> ➡️ <img src="Screenshots/checkpoint.png" width="40%"/>
-
-1. Download `sd3.5_large_fp8_scaled.safetensors` from https://huggingface.co/Comfy-Org/stable-diffusion-3.5-fp8/blob/main/sd3.5_large_fp8_scaled.safetensors and place it in your `SuperklokStyleLoRA\ComfyUI_windows_portable\ComfyUI\models\checkpoints` folder.
+### Step 2: Load the Automated Workflow & Dependencies 
 
 <img src="Screenshots/ComfyUI files.png" width="60%"/>
 
-2. Browse to your `SuperklokStyleLoRA\ComfyUI_windows_portable` folder and double-click your modified `run_nvidia_gpu.bat` file. A browser window will open automatically at `http://127.0.0.1:8188`. It may take a couple minutes to launch for the first time after installing ComfyUI.
+1. Browse to your newly provisioned `SuperklokStyleLoRA\ComfyUI_windows_portable\` folder and double-click the `run_nvidia_gpu.bat` file. A browser window will open automatically at `http://127.0.0.1:8188`. It may take a couple minutes to launch for the first time after installing ComfyUI.
 
-3. Locate the `ComfyUI Workflow - SuperklokStyleLoRA.json` workflow file inside the `SuperklokStyleLoRA\` folder.
+2. Locate the `ComfyUI Workflow - SuperklokStyleLoRA - SD3.5Large.json` workflow file inside the `SuperklokStyleLoRA\` folder.
 
 <img src="Screenshots/ComfyUI load workflow.png" width="40%"/> ➡️ <img src="Screenshots/ComfyUI loaded workflow.png" width="40%"/>
 
-4. Drag and drop the `ComfyUI Workflow - SuperklokStyleLoRA.json` workflow file directly into the ComfyUI browser interface to load the automated pipeline.
-
-<img src="Screenshots/dataset.png" width="60%"/>
-
-5. Browse to your `SuperklokStyleLoRA\dataset` folder and copy the `20_SuperklokStyle` folder.
-
-<img src="Screenshots/input dataset.png" width="60%"/>
-
-6. Paste the `20_SuperklokStyle` dataset into the `SuperklokStyleLoRA\ComfyUI_windows_portable\ComfyUI\input` folder.
+3. Drag and drop the `ComfyUI Workflow - SuperklokStyleLoRA - SD3.5Large.json` workflow file directly into the ComfyUI browser interface to load the automated pipeline.
 
 <img src="Screenshots/run ComfyUI.png" width="60%"/>
 
-7. Enter the number of LoRAs you would like to train sequentially, then press `Run` to train the amount of LoRAs you requested. Your trained LoRA files can be found in the `SuperklokStyleLoRA\ComfyUI_windows_portable\ComfyUI\output\models\loras` folder.
+4. Enter the number of LoRAs you would like to train sequentially, then press `Run` to train the amount of LoRAs you requested. Your trained LoRA `.safetensors` files can be found in the `SuperklokStyleLoRA\ComfyUI_windows_portable\ComfyUI\output\models\loras` folder.
 
 <img src="Screenshots/trained LoRA.png" width="60%"/>
 
@@ -150,6 +122,98 @@ If you're interested in owning a custom version of the same Premium ComfyUI Work
 <img src="Screenshots/SuperklokStyle_00001_.png" />
 
 Your 100% Commercially Usable LoRA training workflow is ready to go, and the parameters can easily be modified to train your own custom LoRAs!
+
+---
+
+# 🫧 SuperklokStyleLoRA: Core Training Node Architecture Breakdown
+
+This section details the specific node pathways, hyperparameter weights, and local tensor logic utilized within the `ComfyUI Workflow - SuperklokStyleLoRA - SD3.5Large.json` local optimization pipeline.
+
+## 📥 Dataset Ingestion & Processing Layers
+
+### Load Image Text Dataset From Folder (`LoadImageTextDataSetFromFolder`)
+* **Purpose:** Batches raw visual style training layers paired with text caption sheets simultaneously.
+* **Key Configuration:** `folder`: `20_SuperklokStyle`.
+* **Function:** Points directly to your internal database directory, grabbing your 120 gold-standard reference frames alongside their matching `.txt` prompt descriptive files.
+
+### Make Training Dataset (`MakeTrainingDataset`)
+* **Purpose:** Packs style image pixels and text strings into standardized mathematical training arrays.
+* **Key Configuration:** Inputs dynamically linked to the base checkpoint’s VAE and CLIP networks.
+* **Function:** Compresses raw high-resolution pixel boundaries down into unrendered latent maps using the model's native VAE visual encoder, while transforming descriptive text scripts into clean conditioning tensors via the CLIP network.
+
+---
+
+## 🤖 Base Loading & Training Engine
+
+### Checkpoint Loader Simple (`CheckpointLoaderSimple`)
+* **Purpose:** Initializes the foundational multi-modal diffusion network.
+* **Key Configuration:** `ckpt_name`: `sd3.5_large_fp8_scaled.safetensors`.
+* **Function:** Loads the primary Stable Diffusion 3.5 framework blocks, splitting the logic signal into the central MODEL workspace, text routing filters (CLIP), and data converters (VAE).
+
+### Train LoRA Node (`TrainLoraNode`)
+* **Purpose:** Computes matrix error weights to isolate and bake intricate art styles locally.
+* **Key Configuration:** 
+  * `batch_size`: 2
+  * `grad_accumulation_steps`: 1
+  * `steps`: 2700
+  * `learning_rate`: 0.00003 (`3e-5`)
+  * `Rank`: 32
+  * `optimizer`: "AdamW"
+  * `loss_function`: "MSE"
+  * `training_dtype`: "bf16"
+  * `lora_dtype`: "bf16"
+  * `quantized_backward`: true
+  * `Algorithm`: "LoRA"
+  * `gradient_checkpointing`: true
+  * `checkpoint_depth`: 2
+  * `Offloading`: true
+* **Function:** The core synthesis layer of the pipeline. It maps custom textures, CRT monitor aesthetics, and neon-green circuitry across **2,700 total iterations** using modern AdamW mathematical solvers. The learning rate is tuned slightly higher (`3e-5`) than typical character pipelines to ensure complex geometric layouts are aggressively absorbed. It leverages critical hardware configurations like `quantized_backward`, memory `offloading`, and `gradient_checkpointing` to drop VRAM requirements drastically, allowing stable execution within consumer GPU layouts.
+
+---
+
+## 💾 Output Processing
+
+### Save LoRA (`SaveLoRA`)
+* **Purpose:** Writes the completed, fine-tuned network weights permanently to disk storage.
+* **Key Configuration:** `filename_prefix`: `models/loras/SuperklokStyleLoRA`.
+* **Function:** Finalizes data processing loops and outputs a ready-to-run `.safetensors` model file directly into your local ComfyUI directory tree.
+
+---
+
+# 🪾 SuperklokStyleLoRA Repository File Tree
+
+```text
+📁 SuperklokStyleLoRA/                 (Main Fine-Tuning Art Style Workspace Folder)
+  ├── 📄 captioner.py                  (Automated Dataset Text Processing Script)
+  ├── 📄 ComfyUI Workflow - SuperklokStyleLoRA - SD3.5Large.json (Training Automation Script)
+  ├── 📄 CONTENTS.txt                  (Raw Directory Layout Export Data)
+  ├── 📄 FUNDING.yml                   (Project Support & Sponsorship Info)
+  ├── 📄 LICENSE                       (Unified Public Asset License v1.0 File)
+  ├── 📄 README.md                     (Main Repository Documentation Workspace)
+  ├── 📄 README.pdf                    (Portable Document Format Documentation)
+  ├── 📄 superklokstylelora-comfyui-installer.py (Portable ComfyUI Installer Script)
+  │
+  ├── 📁 Assets/                        (Workflow Graphic Assets & Typography Elements)
+  │     ├── 📄 CircuitBoard - Superklok Labs Writing.png
+  │     ├── 📄 CircuitBoard.png
+  │     ├── 📄 CRT Screen 24x24px Tiles.png
+  │     ├── 📄 CRT Screen 32x32px Tiles.png
+  │     ├── 📄 CRT Screen 50x50px Tiles.png
+  │     ├── 📄 CRT Tile.png
+  │     ├── 📄 Superklok Labs Banner.png
+  │     └── 📄 VT323-Regular.ttf
+  │
+  ├── 📁 dataset/                       (Active Machine Learning Input Workspace)
+  │     └── 📁 20_SuperklokStyle/        (120 Art Style Images + 120 Caption Text Sheets)
+  │
+  ├── 📁 Output Samples/                 (Generative Sample Production Outputs 1-6)
+  │
+  ├── 📁 Promo/                          (Gumroad Cover Artwork and Marketing Panels 1-5)
+  │
+  ├── 📁 Screenshots/                    (Documentation Step-by-Step UI System Previews)
+  │
+  └── 📁 SuperklokStyleLoRA Training Images/ (Original Isolated 120 Dataset Visual Layers)
+```
 
 ---
 
